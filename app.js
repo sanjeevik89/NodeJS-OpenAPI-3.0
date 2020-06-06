@@ -4,8 +4,16 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const logger = require('morgan');
 const http = require('http');
+const swaggerUi = require('swagger-ui-express');
+const openApiDocumentation = require('./openapi.json');
 const OpenApiValidator = require('express-openapi-validator').OpenApiValidator;
 const app = express();
+
+var options = {
+  explorer: true
+};
+ 
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(openApiDocumentation, options));
 
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.text());
