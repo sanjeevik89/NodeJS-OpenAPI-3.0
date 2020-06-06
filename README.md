@@ -1,4 +1,4 @@
-# express-openapi-validator-example
+# NodeJS-OpenAPI-3.0-example
 
 Provides a simple example demonstrating how [express-openapi-validator](https://github.com/cdimascio/express-openapi-validator) can be used to automatically validate api requests.
 
@@ -6,7 +6,7 @@ Provides a simple example demonstrating how [express-openapi-validator](https://
 
 ```shell
 # 1. clone this repo
-git clone https://github.com/cdimascio/express-openapi-validator-example
+git@github.com:sanjeevik89/NodeJS-OpenAPI-3.0.git
 
 # 2. install dependencies
 npm install
@@ -19,6 +19,12 @@ Start the Api server
 ```shell
 npm start
 ```
+
+
+## Swagger UI endpoint
+
+http://localhost:3000/api-docs/
+
 
 ## Try it
 
@@ -147,3 +153,4 @@ curl -XPOST http://localhost:3000/v1/pets --header 'X-Api-Key: XXXXX' --header '
 ## Fetch the spec
 
 curl http://localhost:3000/spec
+
